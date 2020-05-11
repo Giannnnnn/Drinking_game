@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'folder/Games',
     pathMatch: 'full'
   },
   {
@@ -12,9 +12,21 @@ const routes: Routes = [
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
   },
   {
-    path: 'cadaster',
-    loadChildren: () => import('./cadaster/cadaster.module').then( m => m.CadasterPageModule)
-  }
+    path: 'games',
+    loadChildren: () => import('./games/games.module').then( m => m.GamesPageModule)
+  },
+    {
+    path: 'premium',
+    redirectTo: 'folder/Premium',
+    pathMatch: 'full'
+  },
+  {
+    path: 'about',
+    redirectTo: 'folder/About',
+    pathMatch: 'full'
+  },
+ 
+
 ];
 
 @NgModule({

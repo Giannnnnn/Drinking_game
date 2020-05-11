@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {GamesPage} from './games/games.page';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -13,18 +13,18 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'Play',
-      url: '/folder/Inbox',
+      title: 'Games',
+      url: '/folder/Games',
       icon: 'beer'
     },
     {
-      title: 'Future Games',
-      url: '/folder/Outbox',
-      icon: 'create'
+      title: 'Premium Options',
+      url: '/folder/Premium',
+      icon: 'star'
     },
     {
-      title: 'About',
-      url: '/folder/Favorites',
+      title: 'About the App',
+      url: '/folder/About',
       icon: 'information'
     }
   ];
